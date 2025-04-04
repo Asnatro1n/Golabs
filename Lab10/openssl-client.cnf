@@ -1,0 +1,18 @@
+[ req ]
+default_bits       = 2048
+distinguished_name = req_distinguished_name
+req_extensions     = req_ext
+prompt             = no
+
+[ req_distinguished_name ]
+C  = RU
+ST = YourState
+L  = YourCity
+O  = YourOrganization
+OU = YourOrganizationalUnit
+CN = client
+
+[ req_ext ]
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = clientAuth
